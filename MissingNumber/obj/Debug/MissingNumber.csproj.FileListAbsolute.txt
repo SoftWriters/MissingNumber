@@ -1,0 +1,9 @@
+C:\Users\sergei.kudryski\Documents\Visual Studio 2013\Projects\Win\MissingNumber\MissingNumber\bin\Debug\MissingNumber.exe.config
+C:\Users\sergei.kudryski\Documents\Visual Studio 2013\Projects\Win\MissingNumber\MissingNumber\bin\Debug\MissingNumber.exe
+C:\Users\sergei.kudryski\Documents\Visual Studio 2013\Projects\Win\MissingNumber\MissingNumber\bin\Debug\MissingNumber.pdb
+C:\Users\sergei.kudryski\Documents\Visual Studio 2013\Projects\Win\MissingNumber\MissingNumber\obj\Debug\MissingNumber.Form1.resources
+C:\Users\sergei.kudryski\Documents\Visual Studio 2013\Projects\Win\MissingNumber\MissingNumber\obj\Debug\MissingNumber.Properties.Resources.resources
+C:\Users\sergei.kudryski\Documents\Visual Studio 2013\Projects\Win\MissingNumber\MissingNumber\obj\Debug\MissingNumber.csproj.GenerateResource.Cache
+C:\Users\sergei.kudryski\Documents\Visual Studio 2013\Projects\Win\MissingNumber\MissingNumber\obj\Debug\MissingNumber.exe
+C:\Users\sergei.kudryski\Documents\Visual Studio 2013\Projects\Win\MissingNumber\MissingNumber\obj\Debug\MissingNumber.pdb
+C:\Users\sergei.kudryski\Documents\Visual Studio 2013\Projects\Win\MissingNumber\MissingNumber\obj\Debug\MissingNumber.csprojResolveAssemblyReference.cache
