@@ -1,0 +1,8 @@
+C:\Users\sergei.kudryski\Documents\Visual Studio 2013\Projects\Win\MissingNumber\MissingNumber\bin\Release\MissingNumber.exe.config
+C:\Users\sergei.kudryski\Documents\Visual Studio 2013\Projects\Win\MissingNumber\MissingNumber\bin\Release\MissingNumber.exe
+C:\Users\sergei.kudryski\Documents\Visual Studio 2013\Projects\Win\MissingNumber\MissingNumber\bin\Release\MissingNumber.pdb
+C:\Users\sergei.kudryski\Documents\Visual Studio 2013\Projects\Win\MissingNumber\MissingNumber\obj\Release\MissingNumber.Form1.resources
+C:\Users\sergei.kudryski\Documents\Visual Studio 2013\Projects\Win\MissingNumber\MissingNumber\obj\Release\MissingNumber.Properties.Resources.resources
+C:\Users\sergei.kudryski\Documents\Visual Studio 2013\Projects\Win\MissingNumber\MissingNumber\obj\Release\MissingNumber.csproj.GenerateResource.Cache
+C:\Users\sergei.kudryski\Documents\Visual Studio 2013\Projects\Win\MissingNumber\MissingNumber\obj\Release\MissingNumber.exe
+C:\Users\sergei.kudryski\Documents\Visual Studio 2013\Projects\Win\MissingNumber\MissingNumber\obj\Release\MissingNumber.pdb
