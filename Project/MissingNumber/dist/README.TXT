@@ -1,0 +1,1 @@
+Java is required to run the program. Double click MissingNumber.bat to run the program. The sample.txt is the default file run in the program, but a different file can be specified from the command line, or delete the sample.txt file to have a Open File dialog box open to select a file to run.
