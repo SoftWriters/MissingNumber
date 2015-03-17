@@ -1,0 +1,1 @@
+Source code is in the src folder.  Executable program is available in the dist folder.  Requires the latest version of Java to run.
