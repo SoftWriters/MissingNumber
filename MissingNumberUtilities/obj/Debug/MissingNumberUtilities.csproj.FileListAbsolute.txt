@@ -1,0 +1,5 @@
+C:\Users\JonO\Documents\Visual Studio 2012\Projects\MissingNumber\MissingNumberUtilities\bin\Debug\MissingNumberUtilities.dll
+C:\Users\JonO\Documents\Visual Studio 2012\Projects\MissingNumber\MissingNumberUtilities\bin\Debug\MissingNumberUtilities.pdb
+C:\Users\JonO\Documents\Visual Studio 2012\Projects\MissingNumber\MissingNumberUtilities\obj\Debug\MissingNumberUtilities.csprojResolveAssemblyReference.cache
+C:\Users\JonO\Documents\Visual Studio 2012\Projects\MissingNumber\MissingNumberUtilities\obj\Debug\MissingNumberUtilities.dll
+C:\Users\JonO\Documents\Visual Studio 2012\Projects\MissingNumber\MissingNumberUtilities\obj\Debug\MissingNumberUtilities.pdb
