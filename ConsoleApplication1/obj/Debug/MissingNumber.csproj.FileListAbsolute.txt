@@ -1,0 +1,6 @@
+C:\Users\Christine\documents\visual studio 2013\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\inputlines.txt
+C:\Users\Christine\documents\visual studio 2013\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\MissingNumber.exe.config
+C:\Users\Christine\documents\visual studio 2013\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\MissingNumber.exe
+C:\Users\Christine\documents\visual studio 2013\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\MissingNumber.pdb
+C:\Users\Christine\documents\visual studio 2013\Projects\ConsoleApplication1\ConsoleApplication1\obj\Debug\MissingNumber.exe
+C:\Users\Christine\documents\visual studio 2013\Projects\ConsoleApplication1\ConsoleApplication1\obj\Debug\MissingNumber.pdb
