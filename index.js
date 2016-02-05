@@ -1,7 +1,5 @@
 'use strict'
 
-const process = require ('process');
-
 function isArrayFinite (nums) {
   return nums.every (num => !Number.isNaN (num));
 }
