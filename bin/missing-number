@@ -1,0 +1,53 @@
+#!/usr/bin/env node
+
+// This script looks for missing numbers in a file, or from stdin.
+// 1) Each line of input consists of a blank line, or a list of comma separated
+//    consecutive numbers in any order.
+// 2) Each line is processed, and the first missing number found is written to
+//    stdout. A blank line is written if no missing number is found.
+// 3) Invalid input results in early program termination.
+
+'use strict'
+
+const path = require ('path');
+const process = require ('process');
+const readline = require ('readline');
+const fs = require ('fs');
+const mn = require ('../');
+
+main ();
+
+function parseArgs () {
+  if (3 === process.argv.length) {
+    if (process.argv[2] === '-')
+      return { stream: process.stdin }
+    return { stream: fs.createReadStream (process.argv[2]) };
+  }
+
+  var appname = path.basename (process.argv[1]);
+  console.log (`Usage: ${appname} INPUT_FILE`);
+  console.log ('\n  Note: INPUT_FILE can be \'-\' to read from STDIN\n');
+  process.exit (2);
+}
+
+function main () {
+  var args = parseArgs ();
+  const r = readline.createInterface ({ input: args.stream });
+
+  var count = 0;
+  r.on ('line', function (line) {
+    ++count;
+    try {
+      console.log (mn.parseLine (line) || '');
+    }
+    catch (e) {
+      if (e instanceof mn.InvalidInput)
+      {
+        console.error (inpath + ':' + count);
+        console.error ('    Error: invalid input');
+        process.exit (1);
+      }
+      throw e;
+    }
+  });
+}

@@ -1,0 +1,16 @@
+{
+  "name": "missing-number",
+  "version": "0.1.0",
+  "description": "SoftWriters Missing Number Problem",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules/nodeunit/bin/nodeunit t/test.js"
+  },
+  "author": "Judson Weissert",
+  "license": "MIT",
+  "devDependencies": {
+    "nodeunit": "^0.9.1",
+    "underscore": "^1.8.3"
+  }
+}
