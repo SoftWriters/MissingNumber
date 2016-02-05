@@ -34,10 +34,30 @@ Sample Output
 
 113
 
-The Fine Print
+The Solution
 --------------
-Please use whatever technology and techniques you feel are applicable to solve the problem. We suggest that you approach this exercise as if this code was part of a larger system. The end result should be representative of your abilities and style.
+The solution is implemented as a NodeJS module. Each line is split into an
+array and each element is converted to an integer. The array is then sorted,
+and sequentially searched for a missing number.
 
-Please fork this repository. When you have completed your solution, please issue a pull request to notify us that you are ready.
+### Run the solution
 
-Have fun.
+```
+node bin/missing-numbers INPUT_FILE
+```
+
+The ``node`` portion of the command can be omitted on unix like platforms.
+
+### Test the solution
+
+To run the automated tests:
+
+```
+npm install
+npm test
+```
+
+There is also a script, ``t/gen.js`` that can be used to generate larger
+datasets for testing. The script has been smoke tested with up to 10 million
+elements per line which is probably approaching the upper limit for this
+particular implementation.
