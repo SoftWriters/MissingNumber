@@ -1,0 +1,33 @@
+USE [ESArchive]
+GO
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+-- =============================================
+-- Author:		<Guo, Weihui>
+-- Create date: <8/11/2016>
+-- Description:	<Get the missing number>
+-- =============================================
+ALTER FUNCTION [dbo].[fn_GetMissingNumber]
+(
+	@string VARCHAR(5000)
+)
+RETURNS VARCHAR(5000)
+AS
+
+BEGIN
+
+	DECLARE @result INT, @sum INT, @first INT, @last INT, @X XML, @missingno INT
+
+	SELECT @x = CAST('<A>'+ REPLACE(@string,',','</A><A>')+ '</A>' AS XML)
+
+	SELECT @sum=sum(t.value('.', 'int')), @first=min(t.value('.','int')), @last=max(t.value('.','int'))
+	FROM @x.nodes('/A') AS x(t)
+
+	SELECT @missingno =  @last*(@last+1)/2 - @first*(@first-1)/2 - @sum
+
+	RETURN @missingno
+
+END
