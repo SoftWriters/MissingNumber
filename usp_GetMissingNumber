@@ -1,0 +1,50 @@
+USE [ESArchive]
+GO
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+-- =============================================================================
+-- Author:		<Guo, Weihui>
+-- Create date: <8/11/2016>
+-- Description:	<Get the missing number>
+-- =============================================================================
+
+ALTER PROCEDURE [dbo].[usp_GetMissingNumber]
+(
+	@inputstring VARCHAR(MAX)
+)
+AS
+
+SET NOCOUNT ON
+
+DECLARE @Query VARCHAR(MAX), @Split CHAR(1), @X XML, @number VARCHAR(MAX)
+DECLARE @tblMissing TABLE (Number VARCHAR(MAX))
+DECLARE @tblMissing2 TABLE (Number VARCHAR(MAX))
+
+--SELECT @S='1,2,3,4,5,6,7,8,9,10,12
+
+--24,26,27,29,28
+
+--1,2,4,5
+
+--99,100,101,102,103,104,105,107
+
+--109,105,107,108,106,110,112,111,118,116,115,114,117'
+
+SELECT @inputstring = REPLACE(@inputstring, ',',';')
+SELECT @Query=''''+ REPLACE(@inputstring, CHAR(13),''',''')+''''
+SELECT @Split = ','
+
+SELECT @X = CONVERT(xml,'<root><s>' + REPLACE(@Query,@Split,'</s><s>') + '</s></root>')
+
+INSERT INTO @tblMissing
+SELECT  [Number] = REPLACE(REPLACE(T.c.value('.','varchar(5000)'), ';',','),'''','')
+FROM @X.nodes('/root/s') T(c)
+
+/* Remove any new character break and leading white space */
+INSERT INTO @tblMissing2
+SELECT REPLACE(REPLACE(Number, CHAR(13), ''), CHAR(10), '') AS Number FROM @tblMissing
+
+SELECT Number, CASE dbo.[fn_GetMissingNumber](Number) WHEN 0 THEN '' ELSE dbo.[fn_GetMissingNumber](Number) END AS MissingNumber FROM @tblMissing2
