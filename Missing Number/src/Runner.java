@@ -1,6 +1,6 @@
 
 /**
- * 
+ * The runner class.
  * @author Bryson Hair
  *
  */

@@ -16,7 +16,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
 /**
- * 
+ * Window that takes in a flat file and prints out the missing numbers in a sequence
  * @author Bryson Hair
  *
  */
@@ -54,7 +54,6 @@ public class MainWindow extends JFrame
 					try {
 						lines = Files.readAllLines(file.toPath());
 					} catch (IOException exception) {
-						// TODO Auto-generated catch block
 						exception.printStackTrace();
 					}
 					
