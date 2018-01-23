@@ -37,7 +37,7 @@ namespace MissingNumberTests
         {
             NumberLine target = new NumberLine("1,2,4,5", ',');
             int expected = 3;
-            Assert.AreEqual(expected, target.FindMissingNumber());
+            Assert.AreEqual(expected, target.MissingNumber);
         }
 
         [TestMethod]
@@ -45,7 +45,7 @@ namespace MissingNumberTests
         {
             NumberLine target = new NumberLine("1,2,3,4,5,6,7,8,9,10,12", ',');
             int expected = 11;
-            Assert.AreEqual(expected, target.FindMissingNumber());
+            Assert.AreEqual(expected, target.MissingNumber);
         }
 
         [TestMethod]
@@ -53,7 +53,7 @@ namespace MissingNumberTests
         {
             NumberLine target = new NumberLine("24,26,27,29,28", ',');
             int expected = 25;
-            Assert.AreEqual(expected, target.FindMissingNumber());
+            Assert.AreEqual(expected, target.MissingNumber);
         }
 
         [TestMethod]
@@ -61,7 +61,7 @@ namespace MissingNumberTests
         {
             NumberLine target = new NumberLine("99,100,101,102,103,104,105,107", ',');
             int expected = 106;
-            Assert.AreEqual(expected, target.FindMissingNumber());
+            Assert.AreEqual(expected, target.MissingNumber);
         }
 
         [TestMethod]
@@ -69,7 +69,7 @@ namespace MissingNumberTests
         {
             NumberLine target = new NumberLine("109,105,107,108,106,110,112,111,118,116,115,114,117", ',');
             int expected = 113;
-            Assert.AreEqual(expected, target.FindMissingNumber());
+            Assert.AreEqual(expected, target.MissingNumber);
         }
     }
 }

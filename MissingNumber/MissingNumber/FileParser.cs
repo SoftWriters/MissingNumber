@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace MissingNumber
 {
@@ -14,6 +15,7 @@ namespace MissingNumber
         /// </summary>
         /// <param name="filePath">Full path to the file to read</param>
         /// <returns>IList of NumberLine objects created from the file</returns>
+        /// <exception cref="FileNotFoundException">Thrown if the file passed can not be located</exception>
         public IList<NumberLine> ParseFile(string filePath)
         {
             if (File.Exists(filePath))
@@ -22,23 +24,35 @@ namespace MissingNumber
             }
             else
             {
-                throw new ArgumentException($"Invalid file passed to FileParser, file {filePath} does not exist.");
+                throw new FileNotFoundException($"Invalid file passed to FileParser, file {filePath} does not exist.");
             }
         }
 
         private IList<NumberLine> parseLines(string [] lines)
         {
             List <NumberLine> numberLines = new List<NumberLine>();
-            foreach (string line in lines)
+            NumberLine tmp; 
+            foreach (string line in lines.Where(l => !string.IsNullOrEmpty(l)))
             {
-                numberLines.Add(parseLine(line));
+                tmp = parseLine(line);
+                if (tmp != null)
+                {
+                    numberLines.Add(tmp);
+                }
             }
             return numberLines;
         }
 
         private NumberLine parseLine(string line)
         {
-            return new NumberLine(line, ',');
+            try
+            {
+                return new NumberLine(line, ',');
+            }
+            catch (ArgumentException e)
+            {
+                return null;
+            }
         }
     }
 }

@@ -14,11 +14,13 @@ namespace MissingNumber
         /// <summary>
         /// Creats a new NumberLine object
         /// </summary>
+        /// <exception cref="ArgumentException">Thrown if the string given is not of the correct format</exception>
         public NumberLine(string line, char delimiter)
         {
             Min = int.MaxValue;
             Max = int.MinValue;
             Numbers = populateNumbers(line, delimiter);
+            MissingNumber = getMissingNumber(); 
         }
 
         /// <summary>
@@ -37,12 +39,11 @@ namespace MissingNumber
         public int Max { get; private set; } 
 
         /// <summary>
-        /// Determines which number is missing from the sequence of Numbers
+        /// The Number missing from the Number sequence
         /// </summary>
-        /// <param name="line"></param>
-        /// <param name="delimiter"></param>
-        /// <returns></returns>
-        public int FindMissingNumber()
+        public int MissingNumber { get; private set; }
+        
+        private int getMissingNumber()
         {
             int expectedSum = (Numbers.Count + 1) * (Min + Max) / 2;
             return expectedSum - _sum;
