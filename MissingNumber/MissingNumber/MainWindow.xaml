@@ -5,8 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MissingNumber"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
-    </Grid>
+        Title="Missing Number" Height="700" Width="700">
+    <DockPanel LastChildFill="True">
+        <Button DockPanel.Dock="Top" Content="Select File" Click="SelectFileButtonSelected" />
+        <TextBlock Text="Missing Numbers:" DockPanel.Dock="Top" />
+        <ListBox ItemsSource="{Binding Results}" DockPanel.Dock="Bottom" /> 
+    </DockPanel>
 </Window>

@@ -76,7 +76,7 @@ namespace MissingNumber
             {
                 Min = num; 
             }
-            else if (num > Max)
+            if (num > Max)
             {
                 Max = num;
             }

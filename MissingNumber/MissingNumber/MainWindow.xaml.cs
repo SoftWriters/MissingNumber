@@ -1,17 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.Win32;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace MissingNumber
 {
@@ -23,6 +11,22 @@ namespace MissingNumber
         public MainWindow()
         {
             InitializeComponent();
+            ViewModel = new MainViewModel();
+            DataContext = ViewModel;
+        }
+
+        /// <summary>
+        /// View Model for this window
+        /// </summary>
+        public MainViewModel ViewModel { get; private set; }
+
+        private void SelectFileButtonSelected(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog fileSelector = new OpenFileDialog();
+            if (fileSelector.ShowDialog() == true)
+            {
+                ViewModel.ReadFile(fileSelector.FileName);
+            }
         }
     }
 }

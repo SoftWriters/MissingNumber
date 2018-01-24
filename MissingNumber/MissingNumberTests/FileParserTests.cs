@@ -35,6 +35,34 @@ namespace MissingNumberTests
             int actual = target.ParseFile(Path.Combine(Directory.GetCurrentDirectory(), @"DataFiles\badsamples.txt")).Count;
             Assert.AreEqual(expected, actual);
         }
+        
+        [TestMethod]
+        public void FileParser_ParseFile_BadData_ValidAnswerTest()
+        {
+            FileParser target = new FileParser();
+            int expected = 3;
+            int actual = target.ParseFile(Path.Combine(Directory.GetCurrentDirectory(), @"DataFiles\badsamples.txt"))[0].MissingNumber;
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void FileParser_ParseFile_FileBlankTest()
+        {
+            FileParser target = new FileParser();
+            int expected = 0;
+            int actual = target.ParseFile(Path.Combine(Directory.GetCurrentDirectory(), @"DataFiles\blank.txt")).Count;
+            Assert.AreEqual(expected, actual);
+        }
+
+
+        [TestMethod]
+        public void FileParser_ParseFile_NoValidDataTest()
+        {
+            FileParser target = new FileParser();
+            int expected = 0;
+            int actual = target.ParseFile(Path.Combine(Directory.GetCurrentDirectory(), @"DataFiles\novalid.txt")).Count;
+            Assert.AreEqual(expected, actual);
+        }
 
         [TestMethod]
         [ExpectedException(typeof(FileNotFoundException))]
