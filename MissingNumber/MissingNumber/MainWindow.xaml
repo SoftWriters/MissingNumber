@@ -1,0 +1,14 @@
+﻿<Window x:Class="MissingNumber.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MissingNumber"
+        mc:Ignorable="d"
+        Title="Missing Number" Height="700" Width="700">
+    <DockPanel LastChildFill="True">
+        <Button DockPanel.Dock="Top" Content="Select File" Click="SelectFileButtonSelected" />
+        <TextBlock Text="Missing Numbers:" DockPanel.Dock="Top" />
+        <ListBox ItemsSource="{Binding Results}" DockPanel.Dock="Bottom" /> 
+    </DockPanel>
+</Window>
